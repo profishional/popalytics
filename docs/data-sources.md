@@ -37,6 +37,7 @@ Official watch imagery comes from Swatch product image URLs under `https://stati
 ## Collector Rules
 
 - Save every raw payload before normalization.
+- Store the raw JSON in `raw_source_payloads` and link normalized rows from `marketplace_listings` when possible.
 - Deduplicate by source listing ID, canonical URL, and title/price/source fallback.
 - Build historical charts from daily model medians, not only the latest active ask.
 - Keep one clickable URL per observation so the chart can always be audited.

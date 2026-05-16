@@ -15,17 +15,19 @@ Build a fast, reliable MVP website that tracks AP x Swatch Royal Pop secondary-m
 
 - Next.js App Router frontend, hosted as a lightweight web app.
 - Pure TypeScript domain layer for model matching, price normalization, suspicious-listing detection, and time-series aggregation.
-- Initial MVP uses seed observations so the dashboard works immediately.
-- Production data path should add scheduled collector jobs that write normalized listings and daily snapshots to Postgres/Supabase.
-- The UI consumes normalized data only; raw source payloads should be stored separately for audit/debugging.
+- Local Postgres is the source of truth for the dashboard during development.
+- Seed observations are loaded into Postgres through migrations and seed scripts so the dashboard works immediately.
+- Production data path should add scheduled collector jobs that write raw payloads, normalized listings, and daily snapshots to Postgres/Supabase.
+- The UI consumes normalized data only; raw source payloads are preserved for audit/debugging and later reprocessing.
 
 ## Data Model
 
-- `models`: official Royal Pop model metadata, references, style, retail price.
-- `marketplaces`: source name, access method, cadence, reliability, region.
-- `listings`: normalized marketplace observations with source, URL, title, country, model guess, EUR price, confidence, suspicious flag, observed timestamp.
-- `price_snapshots`: derived median/low/high by model/source/date for charting.
-- `scrape_runs`: collector status, timestamps, error details, and raw counts.
+- `royal_pop_models`: official Royal Pop model metadata, references, style, retail price, image URL, crop metadata, raw payload.
+- `marketplaces`: source name, access method, cadence, reliability, region, scraping methods, raw payload.
+- `raw_source_payloads`: raw marketplace/API/scraper payloads captured before normalization.
+- `marketplace_listings`: normalized marketplace observations with source, URL, title, country, model guess, EUR price, confidence, suspicious flag, observed timestamp, and raw payload reference.
+- `price_snapshots`: derived median/low/high by model/date for charting.
+- `collector_runs`: collector status, timestamps, request/response metadata, error details, and raw run payload.
 
 ## Source Strategy
 

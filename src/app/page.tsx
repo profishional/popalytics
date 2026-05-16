@@ -1,16 +1,12 @@
-import { RoyalPopDashboard } from "@/components/RoyalPopDashboard";
-import {
-  marketplaceStrategies,
-  normalizedListings,
-  royalPopModels,
-} from "@/lib/royal-pop/sample-data";
+import { connection } from "next/server";
 
-export default function Home() {
-  return (
-    <RoyalPopDashboard
-      listings={normalizedListings}
-      models={royalPopModels}
-      strategies={marketplaceStrategies}
-    />
-  );
+import { RoyalPopDashboard } from "@/components/RoyalPopDashboard";
+import { getDashboardData } from "@/lib/db/dashboard-data";
+
+export default async function Home() {
+  await connection();
+
+  const dashboardData = await getDashboardData();
+
+  return <RoyalPopDashboard {...dashboardData} />;
 }

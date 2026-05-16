@@ -135,7 +135,7 @@ const SOURCE_FEEDS: Array<{
   },
 ];
 
-const RAW_LISTINGS: RawListing[] = ROYAL_POP_MODELS.flatMap((model) =>
+export const rawMarketListings: RawListing[] = ROYAL_POP_MODELS.flatMap((model) =>
   DATE_MULTIPLIERS.flatMap(([observedAt, dateMultiplier]) =>
     SOURCE_FEEDS.map((feed) => {
       const eurPrice = CURRENT_ASK_EUR[model.id] * dateMultiplier * feed.priceMultiplier;
@@ -157,7 +157,7 @@ const RAW_LISTINGS: RawListing[] = ROYAL_POP_MODELS.flatMap((model) =>
   ),
 );
 
-export const normalizedListings: NormalizedListing[] = RAW_LISTINGS.map(normalizeListing);
+export const normalizedListings: NormalizedListing[] = rawMarketListings.map(normalizeListing);
 
 export const marketplaceStrategies: MarketplaceStrategy[] = [
   {
