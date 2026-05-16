@@ -1,0 +1,26 @@
+{
+  "_meta": {
+    "collection": "Audemars Piguet x Swatch — Royal Pop",
+    "release_date": "2026-05-16",
+    "notes": "First cross-group Swatch luxury collab. In-store only at launch. Day-1 release was cancelled at multiple boutiques due to crowd-safety concerns, intensifying scarcity. SKU codes captured from swatch.com product pages.",
+    "sources": [
+      "https://www.swatch.com/en-en/royal-pop.html",
+      "https://www.audemarspiguet.com/com/en/news/origins/swatch-royal-pop.html"
+    ]
+  },
+  "skus": [
+    { "ref": "SSX03R100N", "name": "Otto Rosso",   "case_style": "Lepine",     "retail_usd": 400, "palette": "red, pink",                  "url": "https://www.swatch.com/en-us/otto-rosso-ssx03r100n/SSX03R100N.html" },
+    { "ref": "SSX03W100N", "name": "Huit Blanc",   "case_style": "Lepine",     "retail_usd": 400, "palette": "white, rainbow",             "url": "https://www.swatch.com/en-us/huit-blanc-ssx03w100n/SSX03W100N.html" },
+    { "ref": "SSX03G100N", "name": "Green Eight",  "case_style": "Lepine",     "retail_usd": 400, "palette": "green, light green",         "url": "https://www.swatch.com/en-us/green-eight-ssx03g100n/SSX03G100N.html" },
+    { "ref": "SSX03L101N", "name": "Blaue Acht",   "case_style": "Lepine",     "retail_usd": 400, "palette": "lime green, light blue",     "url": "https://www.swatch.com/en-ch/blaue-acht-ssx03l101n/SSX03L101N.html" },
+    { "ref": "SSX03L103N", "name": "Orenji Hachi", "case_style": "Lepine",     "retail_usd": 400, "palette": "navy blue, orange",          "url": "https://www.swatch.com/en-us/orenji-hachi-ssx03l103n/SSX03L103N.html" },
+    { "ref": "SSX03W101N", "name": "Ocho Negro",   "case_style": "Lepine",     "retail_usd": 400, "palette": "black, white",               "url": "https://www.swatch.com/en-us/ocho-negro-ssx03w101n/SSX03W101N.html" },
+    { "ref": "SSX03L100N", "name": "Lan Ba",       "case_style": "Savonnette", "retail_usd": 420, "palette": "light blue, mid blue",       "url": "https://www.swatch.com/en-en/lan-ba-ssx03l100n/SSX03L100N.html" },
+    { "ref": "SSX03J100N", "name": "Otg Roz",      "case_style": "Savonnette", "retail_usd": 420, "palette": "pink, yellow, teal",         "url": "https://www.swatch.com/en-us/otg-roz-ssx03j100n/SSX03J100N.html" }
+  ],
+  "search_synonyms": {
+    "collection": ["Royal Pop", "AP x Swatch", "Audemars Piguet x Swatch", "AP Swatch pocket watch"],
+    "movement": ["SISTEM51 hand-wound"],
+    "case_material": ["Bioceramic"]
+  }
+}
